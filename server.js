@@ -114,7 +114,7 @@ app.listen(PORT, function () {
                 var obj = JSON.parse(data);
                 for (i = 0; i < obj.length; i++) {
                     reservations.push(obj[i]);
-                    console.log("Adding " + i + " reservation.")
+                    console.log("Adding " + obj[i].customerName + " to reservations.")
                 }
             });
         }
@@ -125,7 +125,7 @@ app.listen(PORT, function () {
                 var obj = JSON.parse(data);
                 for (i = 0; i < obj.length; i++) {
                     waitList.push(obj[i]);
-                    console.log("Adding " + i + " waitList.")
+                    console.log("Adding " + obj[i].customerName + " to waitList.")
                 }
             });
         }
